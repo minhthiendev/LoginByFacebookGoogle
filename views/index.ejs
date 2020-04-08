@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <% if (!user) { %>
+    <div style="width: 500px; height: 180px;">
+      <h2 style="font-size: 40px;">Welcome! Please log in.</h2>
+      <a href="/login">Login</a>
+    </div>
+    <% } else { %>
+    <h2>Hello, <%= user.displayName %>.</h2>
+    <p>ID: <%= user.id %></p>
+    <p>Name :<%= user.displayName %></p>
+    <a href="/logout">Logout</a>
+    <% } %>
+  </body>
+</html>
